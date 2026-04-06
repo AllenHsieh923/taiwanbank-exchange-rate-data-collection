@@ -1,4 +1,9 @@
+import sqlite3
+
 import pandas as pd
+
+conn = sqlite3.connect("台灣銀行.db")
+# sql = 'Select * from 匯率 where 日期 = ""'
 
 url = "https://rate.bot.com.tw/xrt/all/2026-04-02"
 
@@ -22,5 +27,5 @@ df = df[columns_list]
 for i in df.columns[3:]:
     df[i] = pd.to_numeric(df[i], errors="coerce")
 
-
+df.to_sql("匯率", conn, if_exists="append", index=False)
 print(df.head())
