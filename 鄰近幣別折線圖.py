@@ -25,7 +25,6 @@ plt.xlabel("日期", fontsize=16)
 plt.ylabel("現金買入", fontsize=16)
 plt.title(f"{sophia} 和鄰近幣別折線圖", fontsize=24)
 plt.xticks(np.linspace(0, len(df1) - 1, 12))
-
-
-print(s)
+plt.tight_layout()
+plt.savefig("鄰近幣別折線圖.png")
 plt.show()

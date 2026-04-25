@@ -8,18 +8,18 @@
 - 儲存至 SQL
 - 從2025年1月1日開始,逐日抓取資料
 - 避免重複寫入
+- 
 
-# Tech Stack
+# 如何執行：
+1. 確保已安裝必要套件：
+   pip install pandas matplotlib numpy sqlite3 time datetime
+2. 執行主程式：
+   python 抓取台灣銀行每日匯率行情.py
+   python 指定幣別折線圖.py
+   python 鄰近幣別折線圖.py
 
-- import random
-- import sqlite3
-- from datetime import datetime
-- from time import sleep
-- import pandas as pd
-
-# 使用方法
-
-
+# 資料來源
+臺灣銀行歷史匯率查詢
 
 
 # 用途
